@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="calc_top--section">
+        <div class="calc-top__title">
+          <h1>calc</h1>
+        </div>
+        <div class="calc-top__rightcontent">
+          <div class="theme">
+            <h6>THEME</h6>
+          </div>
+          <div class="toggle-menu">
+            <nav class="top-scale">
+              <span>1</span>
+              <span>2</span>
+            <!--   <span>3</span> -->
+            </nav>
+            <div class="toggle-range">
+            <div class="bauble_box">
+              <input class="bauble_input" id="bauble_check" name="bauble" type="checkbox">
+              <label class="bauble_label" for="bauble_check">Toggle</label>
+            </div>
+          </div>
+          </div>
+       
+        </div>
+      </div>
+
+      
+      
+        <textarea disabled class="display-result" name="answer" placeholder="399,981"></textarea>
+     
+
+      <div class="bottom-buttons">
+        <div class="container--grid1">7</div>
+        <div class="container--grid1">8</div>
+        <div class="container--grid1">9</div>
+        <div class="container--grid1">Del</div>
+        <div class="container--grid1">4</div>
+        <div class="container--grid1">5</div>
+        <div class="container--grid1">6</div>
+        <div class="container--grid1">+</div>
+        <div class="container--grid1">1</div>
+        <div class="container--grid1">2</div>
+        <div class="container--grid1">3</div>
+        <div class="container--grid1">-</div>
+        <div class="container--grid1">.</div>
+        <div class="container--grid1">0</div>
+        <div class="container--grid1">/</div>
+        <div class="container--grid1">*</div>
+        <div class="container--grid1">Reset</div>
+        <div class="container--grid1">=</div>
+      </div>
+      
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

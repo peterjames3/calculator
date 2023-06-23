@@ -1,0 +1,304 @@
+:root {
+  /*    Theme 1 */
+
+  /*  Backgrounds */
+
+  --Very-dark-desaturated-blue/* (main background) */: hsl(222, 26%, 31%);
+  --Very-dark-desaturated-blue/*  (toggle background, keypad background) */: hsl(
+    223,
+    31%,
+    20%
+  );
+  --Very-dark-desaturated-blue/* (screen background) */: hsl(224, 36%, 15%);
+
+  /*  Keys */
+
+  --Desaturated-dark-blue/* (key background) */: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue/* (key shadow) */: hsl(224, 28%, 35%);
+
+  --Red/* (key background, toggle) */: hsl(6, 63%, 50%);
+  --Dark-red/* (key shadow) */: hsl(6, 70%, 34%);
+
+  --Light-grayish-orange/* (key background) */: hsl(30, 25%, 89%);
+  --Grayish-orange/* (key shadow) */: hsl(28, 16%, 65%);
+
+  /*  Text */
+
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+
+  /*  Theme 2 */
+
+  /* Backgrounds */
+
+  --Light-gray/* (main background) */: hsl(0, 0%, 90%);
+  --Grayish-red/* (toggle background, keypad background) */: hsl(0, 5%, 81%);
+  --Very-light-gray/* (screen background) */: hsl(0, 0%, 93%);
+
+  /*  Keys */
+
+  --Dark-moderate-cyan/* (key background )*/: hsl(185, 42%, 37%);
+  --Very-dark-cyan/* (key shadow) */: hsl(185, 58%, 25%);
+
+  --Orange/* (key background, toggle) */: hsl(25, 98%, 40%);
+  --Dark-orange/*  (key shadow) */: hsl(25, 99%, 27%);
+
+  --Light-grayish-yellow/* (key background) */: hsl(45, 7%, 89%);
+  --Dark-grayish-orange/* (key shadow) */: hsl(35, 11%, 61%);
+
+  /*  Text */
+
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --White/* (text) */: hsl(0, 0%, 100%);
+
+  /*  Theme 3 */
+
+  /*   Backgrounds */
+
+  --Very-dark-violet/* (main background) */: hsl(268, 75%, 9%);
+  --Very-dark-violet/* (toggle background, keypad background, screen background) */: hsl(
+    268,
+    71%,
+    12%
+  );
+  /* 
+   Keys
+   */
+  --Dark-violet/* (key background) */: hsl(281, 89%, 26%);
+  --Vivid-magenta/* (key shadow) */: hsl(285, 91%, 52%);
+
+  --Pure-cyan/* (key background, toggle) */: hsl(176, 100%, 44%);
+  --Soft-cyan/* (key shadow) */: hsl(177, 92%, 70%);
+
+  --Very-dark-violet/* (key background) */: hsl(268, 47%, 21%);
+  --Dark-magenta/* (key shadow) */: hsl(290, 70%, 36%);
+
+  /*   Text */
+
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+
+  font-family: League Spartan, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--Very-dark-violet);
+  color: var(--White);
+  min-height: 30rem;
+  display: grid;
+  place-content: center;
+}
+.whitemode{
+  background-color:var( --Very-dark-desaturated-blue);
+ 
+}
+#app {
+  max-width: 450px;
+
+  margin-top: 3rem;
+  min-height: 30rem;
+  padding: 1rem;
+}
+.calc_top--section {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  color: var(--White);
+  background: transparent;
+}
+
+.calc-top__rightcontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme {
+  margin-right: 1.7rem;
+}
+.toggle-menu {
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-scale {
+  display: flex;
+  justify-content: space-around !important;
+  margin-bottom: -1rem;
+  font-size: 12px;
+}
+.toggle-range {
+  display: flex;
+  justify-content: center;
+}
+.bauble_box .bauble_label {
+  background: var(--Very-dark-blue);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  height: 25px;
+  position: relative;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  width: 70px;
+}
+
+.bauble_box .bauble_label:before {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: inset 0 -5px 25px hsl(6, 70%, 34%), 0 10px 20px rgba(0, 0, 0, 0.4);
+
+  content: "";
+  display: block;
+
+  left: 2px;
+  position: absolute;
+  top: 3.5px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+}
+
+.bauble_box input.bauble_input {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Checked */
+.bauble_box input.bauble_input:checked + .bauble_label {
+  background-color: var(--Dark-red);
+}
+
+.bauble_box input.bauble_input:checked + .bauble_label:before {
+  background-position: 150% 0;
+  box-shadow: inset 0 -5px 25px #050, 0 10px 20px rgba(0, 0, 0, 0.4);
+  left: calc(100% - 19px);
+}
+
+.display-result {
+  width: 100%;
+  height: 6rem;
+  margin: 2rem 0;
+  background: var(--Very-dark-blue);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 1.6rem;
+  text-align: right;
+  vertical-align: bottom;
+  resize: none;
+  border: none;
+  appearance: none;
+  color: var(--White);
+}
+
+textarea.display-result::placeholder {
+  font-weight: bold;
+  border: none;
+}
+
+.bottom-buttons {
+  width: 100%;
+ 
+  border-radius: 1rem;
+  display: grid;
+  padding: 1.2rem;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(5, 2.9rem);
+  gap: 20px;
+
+  font-size: 1.5rem;
+  background: var(--Very-dark-desaturated-blue);
+}
+.bottom-buttons > div {
+  background-color: var(--Light-grayish-orange);
+  color: var(--Very-dark-blue);
+  text-align: center;
+  font-weight: 700;
+  display: grid;
+  border-radius: 0.5rem;
+  place-content: center;
+  cursor: pointer;
+  border-bottom: 3px solid var(--Light-yellow);
+}
+.violet{
+  border-bottom: 3px solid var(--Dark-red);
+}
+
+.bottom-buttons :nth-child(18) {
+  background-color: var(--Dark-red) !important;
+  grid-column: span 2;
+}
+.bottom-buttons :nth-child(17) {
+  grid-column: span 2;
+}
+.bottom-buttons :nth-child(4),
+:nth-child(17) {
+  background-color: var(--Desaturated-dark-blue) !important;
+  border-bottom: 3px solid var(--Very-dark-grayish-blue) !important;
+}
+@media screen and (max-width:450px) {
+
+  
+#app {
+  max-width: 450px;
+}
+.bottom-buttons {
+  display:grid;
+  place-content:center;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 3.5rem);
+ 
+}
+}
+@media screen and (max-width:410px) {
+
+  
+  #app {
+    max-width: 450px;
+  }
+  .bottom-buttons {
+    display:grid;
+    place-content:center;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 3.9rem);
+   
+  }
+  }
+  @media screen and (max-width:370px) {
+
+  
+    #app {
+      max-width: 450px;
+    }
+    .bottom-buttons {
+      display:grid;
+      place-content:center;
+      grid-template-columns: repeat(4, 50px);
+      grid-template-rows: repeat(5, 4rem);
+     
+    }
+    }
+    
+    @media screen and (max-width:330px) {
+
+  
+      #app {
+        max-width: 450px;
+      }
+      .bottom-buttons {
+        display:grid;
+        place-content:center;
+        grid-template-columns: repeat(4, 40px);
+        grid-template-rows: repeat(5, 4rem);
+       
+      }
+      }
